@@ -1,11 +1,13 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import BlogCard from '../../Componant/BlogCard/BlogCard';
+import LoaderComponant from '../../Componant/LoaderComponant/LoaderComponant';
 
-const Blog = () => {
+const Blogs = () => {
     const blogs  = useLoaderData();
+	const navigation = useNavigation()
     // console.log(blogs)
-
+if(navigation.state==='loading')return <LoaderComponant/>
     return (
         <>
          <section className="bg-synthwave text-gray-100">
@@ -32,4 +34,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default Blogs;
