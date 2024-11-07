@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, Outlet, useLoaderData } from 'react-router-dom';
 // import { useLoaderData } from 'react-router-dom';
 
 const SingleBlogPage = () => {
     // tab state set
     const [tabIndex, setTabIndex] = useState(0)
     const blog = useLoaderData()
-    const {comments_count, title, reading_time_minutes, public_reactions_count,published_at} = blog
+    const {comments_count, title, reading_time_minutes, public_reactions_count,published_at,tags} = blog;
+    // console.log(tags)
     return (
         <>
         <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
@@ -66,34 +67,16 @@ const SingleBlogPage = () => {
                 <path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'></path>
               </svg>
               <span>Author</span>
-            </Link> part 4 - 28.30  
+            </Link>
 </div>
 
 		</div>
-		<div className="text-gray-100">
-			<p>Insert the actual text content here...</p>
-		</div>
+		
+    <Outlet/>
 	</article>
 	<div>
-		<div className="flex flex-wrap py-6 gap-2 border-t border-dashed border-gray-400">
-			<a rel="noopener noreferrer" href="#" className="px-3 py-1 rounded-sm hover:underline bg-violet-400 text-gray-900">#MambaUI</a>
-			<a rel="noopener noreferrer" href="#" className="px-3 py-1 rounded-sm hover:underline bg-violet-400 text-gray-900">#TailwindCSS</a>
-			<a rel="noopener noreferrer" href="#" className="px-3 py-1 rounded-sm hover:underline bg-violet-400 text-gray-900">#Angular</a>
-		</div>
-		<div className="space-y-2">
-			<h4 className="text-lg font-semibold">Related posts</h4>
-			<ul className="ml-4 space-y-1 list-disc">
-				<li>
-					<a rel="noopener noreferrer" href="#" className="hover:underline">Nunc id magna mollis</a>
-				</li>
-				<li>
-					<a rel="noopener noreferrer" href="#" className="hover:underline">Duis molestie, neque eget pretium lobortis</a>
-				</li>
-				<li>
-					<a rel="noopener noreferrer" href="#" className="hover:underline">Mauris nec urna volutpat, aliquam lectus sit amet</a>
-				</li>
-			</ul>
-		</div>
+	
+		
 	</div>
 </div>
 
