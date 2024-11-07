@@ -8,7 +8,7 @@ import rehypeRaw from 'rehype-raw';
 
 const Content = () => {
   const blog = useLoaderData();
-  const { title, description, cover_image, published_at, tags, body_html } = blog;
+  const { title, description, cover_image, published_at, tags, body_html, url } = blog;
   return (
     <>
       <div
@@ -21,10 +21,9 @@ const Content = () => {
           src={cover_image || PlacceHolderImage}
         />
         <div className="p-6 space-y-2">
-          <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-            {" "}
+          <a href={url} target="_blank" className="text-2xl font-semibold group-hover:underline group-focus:underline">
             {title}
-          </h3>
+          </a>
           <span className="text-xs text-gray-400">
             {new Date(published_at).toLocaleDateString()}
           </span>
