@@ -1,8 +1,5 @@
-# React + Vite
+# Thank you for visiting my simple airticle reading blog web app. #
+### click this link to visit live ### 
+[Byte-blaze](https://byte-blaze-36.netlify.app/)
+In this project i used a free api. Here is api [dev.to](https://dev.to/api/articles).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
