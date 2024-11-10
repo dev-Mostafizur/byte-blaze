@@ -1,4 +1,4 @@
-
+import React from 'react';
 import Hero from '../../Componant/Hero/Hero'
 import wave from '../../assets/wave.svg'
 
