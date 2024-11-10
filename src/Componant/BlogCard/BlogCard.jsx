@@ -43,10 +43,15 @@ const BlogCard = ({ blog, deletable, handleDelete}) => {
     </div>
   );
 };
+// Define PropTypes
 BlogCard.propTypes = {
-	blog: PropTypes.object.isRequired,
-	deletable: PropTypes.bool,
-	handleDelete: PropTypes.func,
-	
-  }
+  blog: PropTypes.object.isRequired,
+  deletable: PropTypes.bool,
+  handleDelete: PropTypes.func,
+};
+
+// Define default props with default parameters
+BlogCard.defaultProps = {
+  deletable: false,
+};
 export default BlogCard;
